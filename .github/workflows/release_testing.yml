@@ -1,0 +1,39 @@
+name: Release Testing Pipeline
+
+on:
+    workflow_run:
+      workflows: ["Release Testing Pipeline"]
+      types:
+        - completed
+jobs:
+  robot_framework_tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v5
+      with:
+        python-version: 3.11
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install robotframework
+
+    - name: Run Robot Framework Tests
+      run: |
+        robot tests || true
+
+    - name: "Import results to Xray"
+      uses: mikepenz/xray-action@v3.0.0
+      with:
+        username: ${{ secrets.XRAY_CLIENT_ID }}
+        password: ${{ secrets.XRAY_CLIENT_SECRET }}
+        testFormat: "robot"
+        testPaths: "*.xml"
+        testPlanKey: "GIDP-10"
+        testEnvironments: "Ubuntu"
+        projectKey: "GIDP"

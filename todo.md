@@ -1,0 +1,12 @@
+- Luoda lisää testejä
+- Luoda manuaalisia testejä
+- Järjestää testirepositorio
+- Luoda requirementit testeille
+- Luoda lisää testejä
+- Luoda muutamat test planit
+- Luoda erilliset pipelinet test planeille
+- Luoda automaatio Jiraan ajamaan kyseiset pipelinet on-demand
+- Luoda erillinen projekti requirementeille
+- Luoda kustomoitu linkki Structurea varten
+- Linkitellä epicit erilliseen projektiin
+- Kysyä Timpalta onko tää fiksua?
