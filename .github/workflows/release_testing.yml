@@ -37,6 +37,6 @@ jobs:
         password: ${{ secrets.XRAY_CLIENT_SECRET }}
         testFormat: "robot"
         testPaths: "*.xml"
-        testExecKey: "GIDP-11"
+        testPlanKey: "GIDP-10"
         testEnvironments: "Ubuntu"
         projectKey: "GIDP"
