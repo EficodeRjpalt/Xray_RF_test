@@ -1,8 +1,12 @@
 name: Release Testing Pipeline
 
 on:
-    repository_dispatch:
-        types: [workflow_dispatch]    
+    workflow_dispatch:
+        inputs:
+            release_version:
+                description: 'Release version'
+                required: true
+                default: '1.0.0'
 
 jobs:
   robot_framework_tests:
