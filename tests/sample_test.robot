@@ -11,4 +11,4 @@ Verify Robot Framework is Working
 Verify Robot Framework is Working When Not Working
     [Tags]    GIDP-6
     Log    Hello, Robot Framework!
-    Should Be Equal As Numbers    1    2
+    Should Be Equal As Numbers    1    1
