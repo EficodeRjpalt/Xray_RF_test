@@ -27,8 +27,11 @@ jobs:
       run: |
         robot tests
 
-    - name: Upload Test Results
-      uses: actions/upload-artifact@v2
+    - name: "Import results to Xray"
+      uses: mikepenz/xray-action@v3.0.0
       with:
-        name: robot-results
-        path: output.xml
+        username: ${{ secrets.XRAY_CLIENT_ID }}
+        password: ${{ secrets.XRAY_CLIENT_SECRET }}
+        testFormat: "robot"
+        testPaths: "*.xml"
+        projectKey: "GIDP"
