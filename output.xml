@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.10.13 on darwin)" generated="2024-01-15T14:18:56.399498" rpa="false" schemaversion="5">
-<suite id="s1" name="Sample Test" source="/Users/rasmuspaltschik/Projects/Internal/RF_Xray_Demo/sample_test.robot">
-<test id="s1-t1" name="Verify Robot Framework is Working" line="6">
+<robot generator="Robot 7.0 (Python 3.10.13 on darwin)" generated="2024-01-20T09:03:34.849841" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/Users/rasmuspaltschik/Projects/Internal/RF_Xray_Demo/tests">
+<suite id="s1-s1" name="Sample Test" source="/Users/rasmuspaltschik/Projects/Internal/RF_Xray_Demo/tests/sample_test.robot">
+<test id="s1-s1-t1" name="Verify Robot Framework is Working" line="6">
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-01-15T14:18:56.423904" level="INFO">Hello, Robot Framework!</msg>
+<msg time="2024-01-20T09:03:34.874188" level="INFO">Hello, Robot Framework!</msg>
 <arg>Hello, Robot Framework!</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-01-15T14:18:56.423784" elapsed="0.000176"/>
+<status status="PASS" start="2024-01-20T09:03:34.874065" elapsed="0.000173"/>
 </kw>
 <kw name="Should Be Equal As Numbers" owner="BuiltIn">
 <arg>1</arg>
 <arg>1</arg>
 <doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="PASS" start="2024-01-15T14:18:56.424098" elapsed="0.000149"/>
+<status status="PASS" start="2024-01-20T09:03:34.874370" elapsed="0.000140"/>
 </kw>
-<status status="PASS" start="2024-01-15T14:18:56.423196" elapsed="0.001186"/>
+<status status="PASS" start="2024-01-20T09:03:34.873564" elapsed="0.001078"/>
 </test>
 <doc>This is a simple Robot Framework test suite</doc>
-<status status="PASS" start="2024-01-15T14:18:56.400709" elapsed="0.024010"/>
+<status status="PASS" start="2024-01-20T09:03:34.871897" elapsed="0.003077"/>
+</suite>
+<status status="PASS" start="2024-01-20T09:03:34.851230" elapsed="0.024248"/>
 </suite>
 <statistics>
 <total>
@@ -26,7 +29,8 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Sample Test">Sample Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Sample Test">Tests.Sample Test</stat>
 </suite>
 </statistics>
 <errors>
