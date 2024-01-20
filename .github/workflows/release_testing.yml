@@ -1,9 +1,12 @@
-name: Robot Framework Tests
+name: Release Testing Pipeline
 
 on:
-  pull_request:
-    branches:
-      - main
+    workflow_dispatch:
+        inputs:
+            release_version:
+                description: 'Release version'
+                required: true
+                default: '1.0.0'
 
 jobs:
   robot_framework_tests:
@@ -34,4 +37,6 @@ jobs:
         password: ${{ secrets.XRAY_CLIENT_SECRET }}
         testFormat: "robot"
         testPaths: "*.xml"
+        testPlanKey: "GIDP-10"
+        testEnvironments: "Ubuntu"
         projectKey: "GIDP"
