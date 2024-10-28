@@ -28,6 +28,7 @@ jobs:
         robot tests
 
     - name: "Import results to Xray"
+      if: always()
       uses: mikepenz/xray-action@v3.0.0
       with:
         username: ${{ secrets.XRAY_CLIENT_ID }}
